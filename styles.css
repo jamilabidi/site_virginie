@@ -57,7 +57,45 @@
   position: relative;
   z-index: -100;
 }
+.carte-boutique {
+  width: 300px;
+  height: 300px;
+  border: solid 1px blue;
+  transform: rotateZ(-90deg);
+}
 
+.carte-boutique:hover {
+  animation: test 3s forwards;
+}
+
+.carte-boutique:hover > h1 {
+  animation: title 3s forwards;
+}
+
+@keyframes test {
+  0 {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+    transform: rotateZ(0deg);
+  }
+}
+
+/*brique animée*/
+@keyframes title {
+  0 {
+    transform: translateY(0px);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 /* Style the front side */
 .flip-box-front {
   background-color: #bbb;
