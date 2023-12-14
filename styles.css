@@ -1,0 +1,142 @@
+
+
+.parent-blur{
+    position: relative;
+}
+
+.blur-dark{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4
+    );
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    right: -10px;
+    z-index: 0;
+    filter: blur(40px);
+}
+
+.div-text{
+    position: relative;
+    z-index: 2;
+}
+ /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/*.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}*/
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-box:hover > .flip-box-front{
+  position: relative;
+  z-index: -100;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+} 
+
+
+.card {
+  width: 100px;
+  height: 200px;
+  position: relative;
+}
+
+.card-front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: aqua;
+  z-index: 1;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: red;
+  z-index: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.card:hover > .card-back {
+  z-index: 5;
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+.carte {
+  width: 100px;
+  height: 200px;
+  position: relative;
+}
+
+.carte-front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: aqua;
+  z-index: 1;
+}
+
+.carte-back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: red;
+  z-index: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.carte:hover > .carte-back {
+  z-index: 5;
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
